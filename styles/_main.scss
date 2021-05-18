@@ -6,7 +6,27 @@ body {
   background-position: bottom, top;
 }
 section {
+  max-width: 70%;
+  margin: auto;
   min-height: 90vh;
   text-align: center;
   color: $white;
+  @include redHat();
+  font-size: $bodyCopy;
+
+  h1 {
+    padding-top: 10rem;
+    font-size: 4rem;
+  }
+
+  .counter-container {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    h2 {
+      padding: 2rem 0rem;
+    }
+  }
 }

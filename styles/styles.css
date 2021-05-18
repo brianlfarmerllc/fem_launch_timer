@@ -17,9 +17,38 @@ body {
 }
 
 section {
+  max-width: 70%;
+  margin: auto;
   min-height: 90vh;
   text-align: center;
   color: white;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+section h1 {
+  padding-top: 10rem;
+  font-size: 4rem;
+}
+
+section .counter-container {
+  padding-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section .counter-container h2 {
+  padding: 2rem 0rem;
 }
 
 .attribution {
