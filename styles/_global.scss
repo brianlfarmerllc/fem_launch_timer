@@ -1,0 +1,11 @@
+//Set default browser box sizing, margin and padding
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+//Set default pixel size to 10 for easier rem usage
+html {
+  font-size: 62.5%;
+}

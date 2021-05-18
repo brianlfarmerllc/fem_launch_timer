@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), #1e1f29;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+}
+
+section {
+  min-height: 90vh;
+  text-align: center;
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+}
+
+.attribution a {
+  color: #fb6087;
+}
+/*# sourceMappingURL=styles.css.map */

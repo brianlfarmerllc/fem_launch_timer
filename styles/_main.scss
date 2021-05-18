@@ -1,0 +1,12 @@
+body {
+  min-height: 100vh;
+  background: url("../assets/images/pattern-hills.svg"),
+    url("../assets/images/bg-stars.svg"), $blue;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+}
+section {
+  min-height: 90vh;
+  text-align: center;
+  color: $white;
+}

@@ -1,0 +1,20 @@
+// ----- Colors -----
+
+// Primary
+$greyBlue: hsl(237, 18%, 59%);
+$softred: hsl(345, 95%, 68%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$lightBlue: hsl(236, 21%, 26%);
+$blue: hsl(235, 16%, 14%);
+$darkBlue: hsl(234, 17%, 12%);
+
+// ----- Typography -----
+
+$bodyCopy: 14px;
+
+@mixin redHat() {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+}
