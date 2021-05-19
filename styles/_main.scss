@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   background: url("../assets/images/pattern-hills.svg"),
-    url("../assets/images/bg-stars.svg"), $blue;
+    url("../assets/images/bg-stars.svg"), $darkBlue;
   background-repeat: no-repeat;
   background-position: bottom, top;
 }
@@ -11,22 +11,68 @@ section {
   min-height: 90vh;
   text-align: center;
   color: $white;
+  text-transform: uppercase;
   @include redHat();
   font-size: $bodyCopy;
 
   h1 {
-    padding-top: 10rem;
+    padding-top: 12rem;
     font-size: 4rem;
+    letter-spacing: 0.75rem;
   }
 
   .counter-container {
-    padding-top: 10rem;
+    padding-top: 12rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    h2 {
-      padding: 2rem 0rem;
+  }
+
+  .countdown-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
     }
+  }
+  .time-element {
+    position: relative;
+    color: $softred;
+    height: 140px;
+    width: 150px;
+    background-color: $lightBlue;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 5.5em;
+    overflow: hidden;
+    margin-bottom: 27px;
+    line-height: 138px;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 6;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $darkBlue;
+      border-radius: 50%;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    &:before {
+      left: -0.6rem;
+    }
+    &:after {
+      right: -0.6rem;
+    }
+  }
+  h3 {
+    color: $greyBlue;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    font-weight: 200;
   }
 }

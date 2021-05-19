@@ -11,7 +11,7 @@ html {
 
 body {
   min-height: 100vh;
-  background: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), #1e1f29;
+  background: url("../assets/images/pattern-hills.svg"), url("../assets/images/bg-stars.svg"), #191a24;
   background-repeat: no-repeat;
   background-position: bottom, top;
 }
@@ -22,18 +22,20 @@ section {
   min-height: 90vh;
   text-align: center;
   color: white;
+  text-transform: uppercase;
   font-family: "Red Hat Text", sans-serif;
   font-weight: 700;
   font-size: 14px;
 }
 
 section h1 {
-  padding-top: 10rem;
+  padding-top: 12rem;
   font-size: 4rem;
+  letter-spacing: 0.75rem;
 }
 
 section .counter-container {
-  padding-top: 10rem;
+  padding-top: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,8 +49,65 @@ section .counter-container {
       justify-content: space-around;
 }
 
-section .counter-container h2 {
-  padding: 2rem 0rem;
+section .countdown-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .countdown-block:last-child {
+  margin-right: 0;
+}
+
+section .time-element {
+  position: relative;
+  color: #fb6087;
+  height: 140px;
+  width: 150px;
+  background-color: #343650;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 5.5em;
+  overflow: hidden;
+  margin-bottom: 27px;
+  line-height: 138px;
+}
+
+section .time-element:before, section .time-element:after {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #191a24;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+section .time-element:before {
+  left: -0.6rem;
+}
+
+section .time-element:after {
+  right: -0.6rem;
+}
+
+section h3 {
+  color: #8486a9;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
 }
 
 .attribution {
