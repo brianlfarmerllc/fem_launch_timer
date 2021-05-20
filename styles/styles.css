@@ -28,13 +28,13 @@ section {
   font-size: 14px;
 }
 
-section h1 {
+h1 {
   padding-top: 12rem;
   font-size: 4rem;
   letter-spacing: 0.75rem;
 }
 
-section .counter-container {
+.counter-container {
   padding-top: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,7 +49,7 @@ section .counter-container {
       justify-content: space-around;
 }
 
-section .countdown-block {
+.countdown-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,11 +64,11 @@ section .countdown-block {
           align-items: center;
 }
 
-section .countdown-block:last-child {
+.countdown-block:last-child {
   margin-right: 0;
 }
 
-section .time-element {
+.time-element {
   position: relative;
   color: #fb6087;
   height: 140px;
@@ -82,7 +82,7 @@ section .time-element {
   line-height: 138px;
 }
 
-section .time-element:before, section .time-element:after {
+.time-element:before, .time-element:after {
   content: "";
   position: absolute;
   z-index: 6;
@@ -95,15 +95,75 @@ section .time-element:before, section .time-element:after {
   height: 1.2rem;
 }
 
-section .time-element:before {
+.time-element:before {
   left: -0.6rem;
 }
 
-section .time-element:after {
+.time-element:after {
   right: -0.6rem;
 }
 
-section h3 {
+.time-element > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.top {
+  z-index: 3;
+  background-color: #2a2a41;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: perspective(200px);
+          transform: perspective(200px);
+}
+
+.top-back {
+  z-index: 4;
+  bottom: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  background-color: #33354d;
+  -webkit-transform: perspective(200px) rotateX(180deg);
+          transform: perspective(200px) rotateX(180deg);
+}
+
+.top-back span {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+}
+
+.top,
+.top-back {
+  height: 50%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.bottom {
+  z-index: 1;
+}
+
+.bottom-back {
+  z-index: 2;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  background-color: #33354d;
+}
+
+.bottom-back span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h3 {
   color: #8486a9;
   font-size: 2rem;
   letter-spacing: 0.5rem;

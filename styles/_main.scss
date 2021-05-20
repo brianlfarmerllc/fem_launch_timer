@@ -14,65 +14,119 @@ section {
   text-transform: uppercase;
   @include redHat();
   font-size: $bodyCopy;
+}
 
-  h1 {
-    padding-top: 12rem;
-    font-size: 4rem;
-    letter-spacing: 0.75rem;
-  }
+h1 {
+  padding-top: 12rem;
+  font-size: 4rem;
+  letter-spacing: 0.75rem;
+}
 
-  .counter-container {
-    padding-top: 12rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
+.counter-container {
+  padding-top: 12rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
 
-  .countdown-block {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    &:last-child {
-      margin-right: 0;
-    }
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
   }
-  .time-element {
-    position: relative;
-    color: $softred;
-    height: 140px;
-    width: 150px;
-    background-color: $lightBlue;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 5.5em;
-    overflow: hidden;
-    margin-bottom: 27px;
-    line-height: 138px;
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 6;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $darkBlue;
-      border-radius: 50%;
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-    &:before {
-      left: -0.6rem;
-    }
-    &:after {
-      right: -0.6rem;
-    }
+}
+
+.time-element {
+  position: relative;
+  color: $softred;
+  height: 140px;
+  width: 150px;
+  background-color: $lightBlue;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 5.5em;
+  overflow: hidden;
+  margin-bottom: 27px;
+  line-height: 138px;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $darkBlue;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
   }
-  h3 {
-    color: $greyBlue;
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-    font-weight: 200;
+  &:before {
+    left: -0.6rem;
   }
+  &:after {
+    right: -0.6rem;
+  }
+  & > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.top {
+  z-index: 3;
+  background-color: hsl(240, 21%, 21%);
+  transform-origin: bottom;
+  transform: perspective(200px);
+}
+
+.top-back {
+  z-index: 4;
+  bottom: 0;
+  transform-origin: center;
+  background-color: hsl(235, 20%, 25%);
+  transform: perspective(200px) rotateX(180deg);
+  span {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+.top,
+.top-back {
+  height: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.bottom {
+  z-index: 1;
+}
+
+.bottom-back {
+  z-index: 2;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  background-color: hsl(235, 20%, 25%);
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+h3 {
+  color: $greyBlue;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 200;
 }
