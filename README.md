@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Screenshot
 
-`
 ![](./assets/images/countdown_timer.gif)
 
 ### Links
@@ -79,9 +78,7 @@ window.onload = () => {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I had a great time working with js and css animations in this and feel i have been missing out by not incorporating more of it in previous projects.
 
 ### Useful resources
 
