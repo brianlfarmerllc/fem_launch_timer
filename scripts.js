@@ -19,7 +19,7 @@ function animateFlip(element, value) {
   element.querySelector(".top-back span").innerText = currentValue;
   element.querySelector(".bottom-back span").innerText = currentValue;
 
-  gsap.to(element.querySelector(".top"), 0.7, {
+  gsap.to(element.querySelector(".top"), 0.85, {
     rotationX: "-180deg",
     transformPerspective: 300,
     ease: Quart.easeOut,
@@ -30,7 +30,7 @@ function animateFlip(element, value) {
     },
   });
 
-  gsap.to(element.querySelector(".top-back"), 0.7, {
+  gsap.to(element.querySelector(".top-back"), 0.85, {
     rotationX: 0,
     transformPerspective: 300,
     ease: Quart.easeOut,
@@ -53,11 +53,6 @@ function countdown() {
   const textMin = Math.floor((timeGap % gapHour) / gapMin);
   const textSec = Math.floor((timeGap % gapMin) / gapSec);
   // // set dom elements to values
-  // days.innerText = textDay;
-  // hours.innerText = textHour;
-  // minutes.innerText = textMin;
-  // seconds.innerText = textSec;
-
   animateFlip(days, textDay);
   animateFlip(hours, textHour);
   animateFlip(minutes, textMin);
