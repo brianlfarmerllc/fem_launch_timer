@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  max-width: 1440 px;
   background: url("../assets/images/pattern-hills.svg"),
     url("../assets/images/bg-stars.svg"),
     linear-gradient(to bottom, $darkBlue, rgba(17, 3, 31, 0.865));

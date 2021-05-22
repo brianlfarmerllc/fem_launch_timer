@@ -1,7 +1,7 @@
-// On load gets current day plus 8 days so couter always works
+// On load gets current day plus 14 days so couter always works
 let future;
 window.onload = () => {
-  future = new Date().setDate(new Date().getDate() + 8);
+  future = new Date().setDate(new Date().getDate() + 14);
 };
 // DOM selectors
 const days = document.getElementById("days");
@@ -11,14 +11,14 @@ const seconds = document.getElementById("seconds");
 
 //animate countdown span elements
 function animateFlip(element, value) {
+  // checks value in Dom against current countdown value
   const valueInDom = element.querySelector(".bottom-back").innerText;
   const currentValue = value < 10 ? "0" + value : "" + value;
-
   if (valueInDom === currentValue) return;
-
+  // sets static state of hidden span to current couuntdown value
   element.querySelector(".top-back span").innerText = currentValue;
   element.querySelector(".bottom-back span").innerText = currentValue;
-
+  //animation to flip to current value
   gsap.to(element.querySelector(".top"), 0.85, {
     rotationX: "-180deg",
     transformPerspective: 300,
@@ -29,7 +29,7 @@ function animateFlip(element, value) {
       gsap.set(element.querySelector(".top"), { rotationX: 0 });
     },
   });
-
+  // reset
   gsap.to(element.querySelector(".top-back"), 0.85, {
     rotationX: 0,
     transformPerspective: 300,
