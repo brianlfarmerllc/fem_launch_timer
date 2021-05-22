@@ -28,6 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
+`
 ![](./assets/images/countdown_timer.gif)
 
 ### Links
