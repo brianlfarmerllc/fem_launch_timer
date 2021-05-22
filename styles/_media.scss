@@ -33,17 +33,24 @@
     margin-bottom: 1.2rem;
     &:before,
     &:after {
-      width: 1rem;
-      height: 1rem;
+      width: 0.6rem;
+      height: 0.9rem;
     }
     &:before {
-      left: -0.5rem;
+      left: 0rem;
     }
     &:after {
-      right: -0.5rem;
+      right: 0rem;
     }
   }
-
+  .top,
+  .top-back {
+    border-radius: 4px;
+  }
+  .bottom,
+  .bottom-back {
+    border-radius: 4px;
+  }
   h3 {
     font-size: 1.1rem;
   }

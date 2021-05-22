@@ -82,14 +82,13 @@ h1 span {
   border-radius: 8px;
   text-align: center;
   font-size: 7.8rem;
-  overflow: hidden;
   margin-bottom: 2.7rem;
   line-height: 138px;
   -webkit-box-shadow: 0px 12px 2px #191a24;
           box-shadow: 0px 12px 2px #191a24;
 }
 
-.time-element:before, .time-element:after {
+.time-element:before {
   content: "";
   position: absolute;
   z-index: 6;
@@ -97,17 +96,24 @@ h1 span {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: #191a24;
-  border-radius: 50%;
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
-.time-element:before {
-  left: -0.7rem;
+  border-radius: 0 50% 50% 0;
+  width: 0.8rem;
+  height: 1.2rem;
+  left: 0rem;
 }
 
 .time-element:after {
-  right: -0.7rem;
+  content: "";
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #191a24;
+  border-radius: 50% 0 0 50%;
+  width: 0.8rem;
+  height: 1.2rem;
+  right: 0rem;
 }
 
 .time-element > span {
@@ -145,6 +151,7 @@ h1 span {
 .top,
 .top-back {
   height: 50%;
+  border-radius: 8px;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -152,10 +159,12 @@ h1 span {
 
 .bottom {
   z-index: 1;
+  border-radius: 8px;
 }
 
 .bottom-back {
   z-index: 2;
+  border-radius: 8px;
   top: 0;
   height: 50%;
   overflow: hidden;
@@ -247,14 +256,22 @@ footer a:hover svg path {
     margin-bottom: 1.2rem;
   }
   .time-element:before, .time-element:after {
-    width: 1rem;
-    height: 1rem;
+    width: 0.6rem;
+    height: 0.9rem;
   }
   .time-element:before {
-    left: -0.5rem;
+    left: 0rem;
   }
   .time-element:after {
-    right: -0.5rem;
+    right: 0rem;
+  }
+  .top,
+  .top-back {
+    border-radius: 4px;
+  }
+  .bottom,
+  .bottom-back {
+    border-radius: 4px;
   }
   h3 {
     font-size: 1.1rem;
