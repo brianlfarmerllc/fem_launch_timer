@@ -87,6 +87,6 @@ I had a great time working with js and css animations in this and feel i have be
 
 ## Author
 
-- Website - [Brian Farmer](https://brianlfarmerllc-biosite.netlify.app/)
+- Website - [Portfolio Site](https://brianfarmerwebdev.netlify.app)
 - GitHub URL: - [GitHub URL](https://github.com/brianlfarmerllc/fem_launch_timer)
 - Frontend Mentor - [@brianlfarmerllc](https://www.frontendmentor.io/profile/brianlfarmerllc)
